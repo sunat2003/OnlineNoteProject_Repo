@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block nav_block %}
+<div class="jumbotron" align="center">
+    <div class="container">
+        <h1>Welcome to news Libray</h1>
+        <hr>
+        {% if all_data %}
+        <table border="2">
+            <thead>
+                <td>Name</td>
+                <td>Headline</td>
+                <td>Publish Date</td>
+                <td colspan="2">Action</td>
+            </thead>
+            {% for data in all_data %}
+            <tr>
+                <td>{{data.Name}}</td>
+                <td>{{data.headline}}</td>
+                <td>{{data.publish_date}}</td>
+                <td><a href="/updatenews/{{data.id}}">Update</a></td>
+                <td><a href="/deletenews/{{data.id}}">Delete</a></td>
+            </tr>
+             {% endfor %}
+        </table>
+        {% else %}
+        <h1>No data Found</h1>
+        {% endif %}
+        <hr>
+        
+        <a href="/newsform" class="btn btn-success">Insert Data</a>
+    </div>
+</div>
+{% endblock %}

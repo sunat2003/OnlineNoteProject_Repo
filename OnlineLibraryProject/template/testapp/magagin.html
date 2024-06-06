@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block nav_block %}
+<div class="jumbotron"  align="center">
+    <div class="container">
+        <h1>Welcome to Magine Libray </h1>
+        <hr>
+        {% if all_data %}
+        <table border="2">
+            <thead>
+                <td>Title</td>
+                <td>Auther</td>
+                <td>Publish Date</td>
+                <td>Article</td>
+                <td colspan="2">Action</td>
+            </thead>
+            {% for data in all_data %}
+            <tr>
+                <td>{{data.title}}</td>
+                <td>{{data.author}}</td>
+                <td>{{data.publish_date}}</td>
+                <td>{{data.article}}</td>
+                <td><a href="/updatemagagin/{{data.id}}">Update</a></td>
+                <td><a href="/deletemagagin/{{data.id}}">Delete</a></td>
+            </tr>
+             {% endfor %}
+        </table>
+        {% else %}
+        <h1>No data Found</h1>
+        {% endif %}
+        <hr>
+        
+        <a href="/magaginform" class="btn btn-success">Insert Data</a>
+    </div>
+</div>
+{% endblock %}
