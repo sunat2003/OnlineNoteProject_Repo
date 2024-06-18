@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <section class="login-sec">
+           <div class="container">
+            <div class="image-div"> 
+                <img src="{% static 'imge/login.png' %}" alt="loarding" width="400px" height="500px">
+            </div>
+            <form action="" method="post" class="form-div">
+                <h1>Log in Here...</h1>
+                <input type="text" placeholder="Enter Your Userid"   class="text-input" name="username">
+                <input type="text" placeholder="Enter Your password" class="text-input" name="password">
+                <p>I have no account <a href="/signup">Create account</a></p>
+                {% csrf_token %}
+                <input type="submit" value="Login" class="btn">
+            </form>
+           </div>
+    </section>
+</body>
+</html>

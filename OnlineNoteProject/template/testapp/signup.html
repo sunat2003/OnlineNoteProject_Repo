@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+
+<body>
+    <section class="login-sec">
+        <div class="container">
+            <form action="" method="post" class="form-div">
+                <h1>Sign Up here</h1>
+                <input type="text" placeholder="Enter Your Userid" class="text-input" name="username">
+                <input type="text" placeholder="Enter Your password" class="text-input" name="password">
+                <input type="text" placeholder="Re Enter Password" class="text-input" name="rpassword">
+                <p>I have already a account <a href="/login">Log in here</a></p>
+                {% csrf_token %}
+                <input type="submit" value="Sign Up" class="btn">
+            </form>
+            <div class="image-div">
+                <img src="{% static 'imge/login.png' %}" alt="loarding" width="100%" height="100%">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

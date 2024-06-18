@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+{% block base_block %}
+    <div class="add-topic">
+       <h2>Add Topic</h2>
+       <hr>
+       <p>#write any things</p>
+       <button  class="btn1"><a href="/add">Add here</a></button>
+    </div>
+    <div class="topic">
+      <h1>Your Topics</h1>
+      <hr>
+      <h1></h1>
+      <button class="btn1"><a href="/show">See Your topic</a></button>
+    </div>
+{% endblock %}

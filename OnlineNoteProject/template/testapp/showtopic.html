@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+{% block base_block %}
+<div class="jumbotron">
+    <div class="container">
+        {% for record in user %}
+       <ul>
+        <li><h2>Title:</h2>{{ record.topic }}</li>
+        <hr>
+        <li>{{record.subject }}</li>
+       </ul>
+       <hr>
+       {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+{% block base_block %}
+<form action="" method="post" class="topic-form">
+    <h1>Add Your Topic</h1>
+    <label for="topic">Topic:</label>
+   <input type="text" placeholder="Enter Your topic here" name="topic" id="topic">
+   <hr>
+   <label for="subject">Subject:</label>
+   <textarea   placeholder="#write any thing" name="subject" id="subject"></textarea>
+   <hr>
+   {% csrf_token %}
+   <input type="submit" value="Add Here" class="submit">
+</form>
+{% endblock %}

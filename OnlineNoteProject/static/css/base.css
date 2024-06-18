@@ -1,0 +1,156 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:30px;
+    padding-right:30px;
+    box-shadow:1px 1px 5px gray;
+    position:sticky;
+    background:#365E32;
+    color:white;
+}
+
+.box{
+    height:7px;
+    width:40px;
+    background:#eee;
+    margin:2px;
+}
+.thired{
+   display:flex;
+}
+.thired i{
+    height:40px;
+    width:40px;
+    text-align:center;
+    line-height:40px;
+    background:black;
+    color:#eee;
+    border-radius:50%;
+    margin:10px;
+}
+.profile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+.menulist{
+    height:500px;
+    width:300px;
+    box-shadow:1px 1px 10px #365E32;
+    position:absolute;
+    top:100px;
+    left:-800px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center; 
+    transition:0.8s ease-out;
+    background:#eee;
+}
+.active1{
+    left:20px;
+}
+
+.menulist .logo {
+    height:60px;
+    width:60px;
+    line-height:60px;
+    font-size:30px;
+    text-align:center;
+    border-radius:50%;
+    color:#eee;
+    background:rgb(14, 14, 14,0.7);
+}
+
+.menulist p{
+    font-size:20px;
+
+}
+
+
+.main-section{
+    display:flex;
+    justify-content:space-evenly;
+    padding:100px;
+
+}
+
+.add-topic{
+    text-align:center;
+    height:300px;
+    width:400px;
+    box-shadow:1px 1px 10px #365E32;
+    border-radius:3px;
+}
+.topic{
+    text-align:center;
+    height:300px;
+    width:400px;
+    box-shadow:1px 1px 10px #365E32;
+    border-radius:3px;
+}
+
+
+.btn1{
+    height:40px;
+    width:200px;
+    border:none;
+    outline:none;
+    background-color:green;
+    border-radius:3px;
+}
+
+.btn1 a{
+    color:#fff;
+    text-decoration:none;
+}
+
+
+
+
+/* addtopic css */
+.topic-form{
+    padding:50px;
+    border:1px solid black;
+    text-align:center;
+}
+.topic-form input{
+    height:50px;
+    width:710px;
+    outline:none;
+    border:none;
+    border-radius:2px;
+    padding-left:20px;
+    background:#eee;
+}
+
+.topic-form textarea{
+    height:300px;
+    width:700px;
+    outline:none;
+    border:none;
+    border-radius:2px;
+    padding-left:20px;
+    background:#eee;
+}
+
+.topic-form .submit{
+    height:60px;
+    width:200px;
+    background:red;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+}
